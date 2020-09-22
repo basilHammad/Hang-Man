@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+.main-cont {
+  width: 80vw;
+  height: 80vh;
+  margin: 20px auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header .word-from span {
+  font-weight: bold;
+  color: rgb(223, 32, 32);
+}
+.hints {
+  width: 50vw;
+  height: 50vh;
+  background-color: aqua;
+  position: absolute;
+  margin: 100px auto;
+}
+.game-cont {
+  width: 75vw;
+  min-height: 70vh;
+  background-color: beige;
+  padding: 20px;
+  display: flex;
+}
+.draw-cont {
+  flex: 1;
+  position: relative;
+}
+.stand-top {
+  background-color: #222;
+  position: absolute;
+  width: 31%;
+  height: 4px;
+  left: 20%;
+  top: 15%;
+  display: none;
+}
+.stand-top2 {
+  background-color: #222;
+  position: absolute;
+  width: 4px;
+  height: 10%;
+  left: 50%;
+  top: 16%;
+  display: none;
+}
+
+.stand-base {
+  width: 15%;
+  height: 4px;
+  background-color: #222;
+  position: absolute;
+  left: 12%;
+  top: 94%;
+  display: none;
+}
+.stand-body {
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 88%;
+  left: 19%;
+  top: 7%;
+  display: none;
+}
+.rope {
+  position: absolute;
+  border: 4px dashed #222;
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 26%;
+  left: 41%;
+  display: none;
+}
+.man .head {
+  position: absolute;
+  border: solid 4px #222;
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+  top: 28%;
+  left: 43%;
+  display: none;
+}
+.man .body {
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 36%;
+  left: 50%;
+  top: 42%;
+  display: none;
+}
+.man .hands {
+  display: none;
+}
+.man .hands::before {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 15%;
+  left: 45%;
+  top: 42%;
+  transform: rotate(-50deg);
+}
+.man .hands::after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 15%;
+  left: 55%;
+  top: 42%;
+  transform: rotate(50deg);
+}
+.man .legs {
+  display: none;
+}
+.man .legs::before {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 15%;
+  left: 45%;
+  top: 75%;
+  transform: rotate(50deg);
+}
+.man .legs::after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  width: 4px;
+  height: 15%;
+  left: 55%;
+  top: 75%;
+  transform: rotate(-50deg);
+}
+.draw-cont.show-1 .stand-base {
+  display: block;
+}
+.draw-cont.show-2 .stand-body {
+  display: block;
+}
+.draw-cont.show-3 .stand-top {
+  display: block;
+}
+.draw-cont.show-4 .stand-top2 {
+  display: block;
+}
+.draw-cont.show-5 .rope {
+  display: block;
+}
+.draw-cont.show-6 .head {
+  display: block;
+}
+.draw-cont.show-7 .body {
+  display: block;
+}
+.draw-cont.show-8 .hands {
+  display: block;
+}
+.draw-cont.show-9 .legs {
+  display: block;
+}
+.letters-cont {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.letters {
+  width: 80%;
+  min-height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.letter {
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  border: 1px solid #222;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 25px;
+  user-select: none;
+  cursor: pointer;
+}
+.guss-word {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(214, 205, 205);
+  margin-right: 5px;
+  border-bottom: 2px solid #222;
+  text-align: center;
+  line-height: 30px;
+  font-size: 2em;
+  color: black;
+}
+.clicked {
+  pointer-events: none;
+  background-color: gray;
+}
+.show0 {
+  display: block !important;
+}
+.show1 {
+  display: block;
+}
+.show2 {
+  display: block;
+}
+.show3 {
+  display: block;
+}
+.show4 {
+  display: block;
+}
+.show5 {
+  display: block;
+}
+.show6 {
+  display: block;
+}
+.show7 {
+  display: block;
+}
+.show8 {
+  display: block;
+}
+
+.game-over {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.game-over div {
+  margin: 100px auto;
+  width: 50vw;
+  height: 40vh;
+  background-color: rgb(49, 211, 0);
+  text-align: center;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.game-over a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.win-cont {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.win-cont div {
+  margin: 100px auto;
+  width: 50vw;
+  height: 40vh;
+  background-color: rgb(49, 211, 0);
+  text-align: center;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.win-cont a {
+  text-decoration: none;
+  color: #ffffff;
+}

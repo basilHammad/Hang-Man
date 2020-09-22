@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <title>HANGMAN</title>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="main-cont">
+      <div class="header">
+        <div class="game-name">HANG MAN</div>
+        <div class="word-from">Word From: <span></span></div>
+      </div>
+      <hr />
+      <div class="game-cont">
+        <div class="draw-cont">
+          <div class="stand">
+            <div class="stand-base"></div>
+            <div class="stand-body"></div>
+            <div class="stand-top"></div>
+            <div class="stand-top2"></div>
+          </div>
+          <div class="rope"></div>
+          <div class="man">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="hands"></div>
+            <div class="legs"></div>
+          </div>
+        </div>
+        <div class="letters-cont">
+          <div class="letters"></div>
+          <div class="guss-word"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-over">
+      <div>
+        <h1>GAME OVER</h1>
+        <h2 id = "gameOver-span"></h2>
+        <a href="./index.html"><i class="fas fa-sync"></i></a>
+      </div>
+    </div>
+
+    <div class="win-cont">
+      <div>
+        <h1>exelent work</h1>
+        <a href="./index.html"><i class="fas fa-sync"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
